@@ -30,7 +30,7 @@ public class UserControllerTest {
 	@Test
 	public void testRetrieveUserInfoGoodRequest() throws Exception {       
         //Attempt to retrieve (good request)
-        this.mockMvc.perform(get("/user/hello@world.com")).andExpect(status().isOk());
+        this.mockMvc.perform(get("/user/someone.else@email.com")).andExpect(status().isOk());
 				
 	}
 
