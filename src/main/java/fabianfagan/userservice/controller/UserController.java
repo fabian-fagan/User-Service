@@ -1,6 +1,5 @@
 package fabianfagan.userservice.controller;
 
-import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,20 +21,12 @@ import fabianfagan.userservice.model.UserRepository;
  * @author Fabian Fagan
  */
 @RestController
-class UserController {
+public class UserController {
 
   private final UserRepository repository;
 
   UserController(UserRepository repository) {
     this.repository = repository;
-  }
- 
-  /*
-   *  Retrieve all users. 
-   */ 
-  @GetMapping("/user")
-  List<User> all() {
-    return repository.findAll();
   }
 
   /*

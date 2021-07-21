@@ -27,12 +27,12 @@ public class UserRepositoryIntegrationTest {
 
     @Autowired
     private UserRepository userRepository;
-    
+   
     /**
      * Test a user can be saved and retrieved from the repository.
      */
     @Test
-    public void whenFindByEmail_thenReturnUser() {
+    public void testUserSaveAndRetrieve() {
 
     User user = new User("user@gmail.com", "password", "the", "user");
     entityManager.persist(user);
